@@ -10,7 +10,7 @@ This project builds upon:
 - **[VitePress](https://github.com/vuejs/vitepress)**: A Vite-powered static site generator with markdown support and Vue components integration.
 - **[Niivue](https://github.com/niivue/niivue)**: A high-performance, WebGL-based DICOM viewer for rendering 3D medical images (CT/MRI) with advanced features like segmentation overlays.
 
-![Demo GIF](../../assets/gif/demo.gif)
+![Demo GIF](./assets/gif/demo.gif)
 
 ## ✨ Features
 

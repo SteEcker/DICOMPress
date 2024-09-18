@@ -46,9 +46,6 @@ Thumbs.db
 # Miscellaneous
 *.swp
 
-# Exclude assets/images directory
-assets/images/    
-
 
 # Node.js
 node_modules/
