@@ -21,7 +21,6 @@ jobs:
         uses: hoverkraft-tech/compose-action@v2.0.1
         with:
           compose-file: "./docker-compose.yml"
-          command: "up -d"
 
       # Step 3: Wait for services to initialize (optional)
       - name: Wait for services to initialize
@@ -35,16 +34,9 @@ jobs:
       # Step 5: Health check for HTTP server (port 4000)
       - name: Check HTTP server health
         run: |
-          curl -f http://localhost:4000 || exit 1
+          curl -f http://localhost/http-server/ || exit 1
 
       # Step 6: Health check for Nginx service (port 80)
       - name: Check Nginx health
         run: |
           curl -f http://localhost || exit 1
-
-      # Step 7: Shut down Docker Compose and clean up
-      - name: Stop docker-compose
-        uses: hoverkraft-tech/compose-action@v2.0.1
-        with:
-          compose-file: "./docker-compose.yml"
-          command: "down"
